@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blue & White CV Slideshow</title>
+
+  <style>
+    :root{
+      --primary:#0b5ed7;
+      --secondary:#eaf3ff;
+      --dark:#1b1b1b;
+      --light:#ffffff;
+      --gray:#6c757d;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:linear-gradient(to right,#dfefff,#ffffff);
+      color:var(--dark);
+      overflow:hidden;
+    }
+
+    .slideshow-container{
+      position:relative;
+      width:100%;
+      height:100vh;
+    }
+
+    .slide{
+      display:none;
+      width:100%;
+      height:100vh;
+      padding:60px;
+      background:var(--light);
+    }
+
+    .active{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      animation:fade 0.5s ease-in-out;
+    }
+
+    @keyframes fade{
+      from{opacity:0;}
+      to{opacity:1;}
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:30px;
+      margin-bottom:30px;
+    }
+
+    .profile-pic{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      border:5px solid var(--primary);
+      object-fit:cover;
+      background:#cfdfff;
+    }
+
+    h1{
+      color:var(--primary);
+      font-size:3rem;
+    }
+
+    h2{
+      color:var(--primary);
+      margin-bottom:15px;
+    }
+
+    p, li{
+      line-height:1.8;
+      font-size:1.1rem;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    section{
+      max-width:900px;
+    }
+
+    .controls{
+      position:absolute;
+      bottom:20px;
+      width:100%;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+    }
+
+    button{
+      padding:12px 24px;
+      border:none;
+      background:var(--primary);
+      color:white;
+      font-size:1rem;
+      border-radius:8px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    button:hover{
+      background:#084298;
+    }
+
+    footer{
+      margin-top:20px;
+      color:var(--gray);
+    }
+
+    @media(max-width:768px){
+      .slide{
+        padding:30px;
+      }
+
+      header{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      h1{
+        font-size:2rem;
+      }
+
+      .profile-pic{
+        width:120px;
+        height:120px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="slideshow-container">
+
+    <!-- Slide 1 -->
+    <article class="slide active">
+      <header>
+        
+        <img src="1000332326.jpg" alt="Profile Picture" width="80">
+
+        <div>
+          <h1>Mbali Sizakele Ntombela</h1>
+          <p>Cloud Engineer</p>
+          <footer>
+            mbalisizkele7@gmail.com | +27 723 002 815
+          </footer>
+        </div>
+      </header>
+
+      <section>
+        <h2>Professional Summary</h2>
+        <p>
+          I am a motivated and goal-oriented individual with a Bachelor of Technology in 
+Information Technology. I am seeking opportunities to grow professionally in an 
+IT-driven environment. I am committed to delivering high-quality work with 
+dedication, efficiency, and integrity. With a strong client-focused mindset and a 
+passion for continuous learning, I aim to contribute meaningfully to any 
+organization by enhancing operational efficiency and aligning with its values and 
+goals.  
+        </p>
+      </section>
+    </article>
+
+    <!-- Slide 2 -->
+    <article class="slide">
+      <section>
+        <h2>Skills</h2>
+        <ul>
+          <li>.Net(C# Console,MVC)</li>
+          <li>CSS,HTML and Javascript</li>
+          <li>SCRUM</li>
+          <li>visual studio,visual studio code,visio,sql server management studio</li>
+          <li>Git & GitHub</li>
+          <li>Azure Portal and Azure DevOps Portal</li>
+          <li>PowerShell Scripting,Yaml and Json File</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- Slide 3 -->
+    <article class="slide">
+      <section>
+        <h2>Work Experience</h2>
+
+        <h3>Azure DevOps intern</h3>
+        <p><strong>Netcampus and Mercedes Bes</strong> | 2023 - 2024</p>
+
+        <ul>
+          <li>Creatimg pipelines.</li>
+          <li>providing deployment support to the users and Domain.</li>
+        </ul>
+
+        <br />
+
+        <h3>Web Developer Learner</h3>
+        <p><strong>Altron Bytes People Solutions</strong> | 2019 - 2020</p>
+
+        <ul>
+          <li>Built modern business websites.</li>
+          <li>Collaborated with UI designers.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- Slide 4 -->
+    <article class="slide">
+      <section>
+        <h2>Education</h2>
+
+        <p>
+          <strong>Degree of Bachelor of Technology in Information Technology</strong><br />
+          Durban University of Technology<br />
+          2016 - 2020
+        </p>
+
+        <br />
+
+        <h2>Certifications</h2>
+
+        <ul>
+          <li>Agile Project Management</li>
+          <li>Microsoft Azure Fundamental</li>
+          <li>Microsoft Azure Administrator</li>
+          <li>Microsoft Azure Solution Architecture</li>
+          <li>CompTIA Security+</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- Slide 5 -->
+    <article class="slide">
+      <section>
+        <h2>Contact</h2>
+
+        <p>Email: mbalisizkele7@gmail.com</p>
+        <p>Phone: +27 723 002 815</p>
+        <p>LinkedIn:<a href ="https://www.linkedin.com/public-profile/settings/">https://www.linkedin.com/public-profile/settings/</a></p>
+      
+
+        <br />
+
+        <p>
+          Thank you for viewing my CV.
+        </p>
+      </section>
+    </article>
+
+    <!-- Controls -->
+    <nav class="controls" aria-label="Slideshow Navigation">
+      <button onclick="prevSlide()">Previous</button>
+      <button onclick="nextSlide()">Next</button>
+    </nav>
+
+  </main>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+
+    function showSlide(index) {
+      slides.forEach(slide => slide.classList.remove("active"));
+
+      if(index >= slides.length){
+        currentSlide = 0;
+      }
+
+      if(index < 0){
+        currentSlide = slides.length - 1;
+      }
+
+      slides[currentSlide].classList.add("active");
+    }
+
+    function nextSlide(){
+      currentSlide++;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide(){
+      currentSlide--;
+      showSlide(currentSlide);
+    }
+  </script>
+
+</body>
+</html>
